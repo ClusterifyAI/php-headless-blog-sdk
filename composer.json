@@ -1,0 +1,16 @@
+{
+    "name": "headlessblog/sdk",
+    "version": "1.0.0",
+    "description": "PHP SDK for Headless.Blog API",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "HeadlessBlog\\Sdk\\": "src/"
+        }
+    }
+}
