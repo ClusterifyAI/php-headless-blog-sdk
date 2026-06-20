@@ -1,4 +1,4 @@
-# Headless Blog PHP SDK (v1.0.0)
+# Headless Blog PHP SDK (v1.1.3)
 
 Welcome to the official Headless.Blog PHP Developer Guide. This SDK provides a high-performance, strictly typed, and completely database-agnostic interface for PHP applications, Laravel frameworks, decoupled monoliths, or any server-side integrations to consume blog content.
 
@@ -189,6 +189,7 @@ $results = $client->search->query('How to Bake Bread');
         'excerpt' => "A beginner's guide to baking.",
         'featuredImagePathThumbnail' => 'https://cdn.headless.blog/_next/image?url=...',
         'featuredImageDirectUrl' => 'https://cdn.headless.blog/...',
+        'youtubeVideoLink' => 'https://youtube.com/watch?v=...',
         'postTypeId' => 1,
         'contentType' => 'markdown',
         'categories' => [['id' => 1, 'name' => 'Recipes', 'slug' => 'recipes', 'url_link' => 'https://...']],
@@ -237,6 +238,7 @@ $postsData = $client->posts->list([
             'featuredImagePathThumbnail' => 'https://cdn.headless.blog/...',
             'featuredImageDirectUrl' => 'https://cdn.headless.blog/...',
             'featuredImageAlt' => 'Image Alt Text',
+            'youtubeVideoLink' => 'https://youtube.com/watch?v=...',
             'publishedAt' => '2026-06-08T12:00:00Z',
             'postTypeId' => 1,
             'contentType' => 'markdown',
@@ -282,6 +284,7 @@ $post = $client->posts->getBySlug('understanding-headless');
     'featuredImagePathThumbnail' => 'https://cdn.headless.blog/...',
     'featuredImageDirectUrl' => 'https://cdn.headless.blog/...',
     'featuredImageAlt' => 'Image alt text',
+    'youtubeVideoLink' => 'https://youtube.com/watch?v=...',
     'metaSeoTitle' => 'SEO Title',
     'metaSeoDescription' => 'SEO Description',
     'contentFaq' => [
