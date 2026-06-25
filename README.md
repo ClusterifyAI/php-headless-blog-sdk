@@ -1,4 +1,4 @@
-# Headless Blog PHP SDK (v1.1.3)
+# Headless Blog PHP SDK (v1.1.4)
 
 Welcome to the official Headless.Blog PHP Developer Guide. This SDK provides a high-performance, strictly typed, and completely database-agnostic interface for PHP applications, Laravel frameworks, decoupled monoliths, or any server-side integrations to consume blog content.
 
@@ -373,31 +373,7 @@ $contentTypes = $client->contentTypes->list();
 
 ---
 
-### 9. Static Pages
-
-Resolves SEO meta and dynamic layout configuration for static segments like `/about` or `/contact`.
-
-**Method:**
-```php
-// @param string $slug Page URL slug
-$page = $client->pages->getBySlug('about');
-```
-
-**Response Schema:**
-```php
-[
-    'id' => 'uuid',
-    'title' => 'About Us',
-    'slug' => 'about',
-    'content' => '<p>Page content...</p>',
-    'metaSeoTitle' => 'About Us | Headless.Blog',
-    'metaSeoDescription' => 'Learn more about us.'
-]
-```
-
----
-
-### 10. Newsletter
+### 9. Newsletter
 
 Registers a subscriber to the tenant's mailing list.
 
@@ -410,7 +386,7 @@ $response = $client->newsletter->subscribe('user@example.com', 'Jane Doe');
 
 ---
 
-### 11. Sitemap Generation
+### 10. Sitemap Generation
 
 Dynamically generates standard sitemap data (URLs, last modification dates, priorities). Used to programmatically render dynamic `sitemap.xml` feeds.
 

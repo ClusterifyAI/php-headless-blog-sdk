@@ -17,7 +17,6 @@ use HeadlessBlog\Sdk\Resource\CategoriesResource;
 use HeadlessBlog\Sdk\Resource\ContentTypesResource;
 use HeadlessBlog\Sdk\Resource\HomeResource;
 use HeadlessBlog\Sdk\Resource\NewsletterResource;
-use HeadlessBlog\Sdk\Resource\PagesResource;
 use HeadlessBlog\Sdk\Resource\PostsResource;
 use HeadlessBlog\Sdk\Resource\PostTypesResource;
 use HeadlessBlog\Sdk\Resource\SearchResource;
@@ -69,9 +68,6 @@ readonly class Client
     /** @var ContentTypesResource Static Content Types API. */
     public ContentTypesResource $contentTypes;
 
-    /** @var PagesResource Static Pages API. */
-    public PagesResource $pages;
-
     /** @var NewsletterResource Newsletter Subscription API. */
     public NewsletterResource $newsletter;
 
@@ -107,7 +103,6 @@ readonly class Client
         $this->taxonomies = new TaxonomiesResource($this);
         $this->postTypes = new PostTypesResource($this);
         $this->contentTypes = new ContentTypesResource($this);
-        $this->pages = new PagesResource($this);
         $this->newsletter = new NewsletterResource($this);
         $this->sitemap = new SitemapResource($this);
     }
