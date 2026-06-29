@@ -1,4 +1,4 @@
-# Headless Blog PHP SDK (v1.1.5)
+# Headless Blog PHP SDK (v1.1.6)
 
 Welcome to the official Headless.Blog PHP Developer Guide. This SDK provides a high-performance, strictly typed, and completely database-agnostic interface for PHP applications, Laravel frameworks, decoupled monoliths, or any server-side integrations to consume blog content.
 

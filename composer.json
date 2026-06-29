@@ -1,6 +1,6 @@
 {
     "name": "headlessblog/sdk",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "PHP SDK for Headless.Blog API",
     "type": "library",
     "license": "MIT",

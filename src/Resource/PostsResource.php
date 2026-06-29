@@ -14,7 +14,7 @@ readonly class PostsResource extends AbstractResource
      * 
      * Supports intersection filtering via query parameters.
      *
-     * @param array<string, mixed> $filters Optional filters (page, limit, category, tag, taxonomyGroup, taxonomyTerm).
+     * @param array<string, mixed> $filters Optional filters (page, limit, category, tag, taxonomyGroup, taxonomyTerm, postType).
      * 
      * @return array<string, mixed> The paginated posts result containing 'pagination' and 'posts' array.
      * @throws \HeadlessBlog\Sdk\Exception\HeadlessBlogException
