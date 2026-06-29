@@ -1,4 +1,4 @@
-# Headless Blog PHP SDK (v1.1.4)
+# Headless Blog PHP SDK (v1.1.5)
 
 Welcome to the official Headless.Blog PHP Developer Guide. This SDK provides a high-performance, strictly typed, and completely database-agnostic interface for PHP applications, Laravel frameworks, decoupled monoliths, or any server-side integrations to consume blog content.
 
@@ -115,7 +115,7 @@ $bootstrapData = $client->bootstrap->get();
         ]
     ],
     'postTypes' => [
-        ['id' => 1, 'name' => 'Default', 'position' => 0, 'isDefault' => true, 'isDeletable' => false]
+        ['id' => 1, 'name' => 'Default', 'slug' => 'default', 'isNavigation' => true, 'isFiltering' => true, 'position' => 0, 'isDefault' => true, 'isDeletable' => false]
     ]
 ]
 ```
@@ -138,6 +138,7 @@ $settings = $client->settings->get();
     'websiteName' => 'My Blog',
     'websiteBaseUrl' => 'https://myblog.com',
     'blogLandingPageUrl' => 'blog',
+    'blogLandingPageTitle' => 'Read Our Blog',
     'metaSeoKeywords' => 'blog, kitchen, travel',
     'highlightedCategoryId' => 5,
     'semanticSearchHeadlessApi' => true,
@@ -365,7 +366,7 @@ $term       = $client->taxonomies->getByTermSlug('difficulty', 'easy');
 **Post Types & Content Types:**
 ```php
 $postTypes = $client->postTypes->list();
-// Returns: [['id' => 1, 'name' => 'Default', 'isDeletable' => false, 'isDefault' => true, 'position' => 0]]
+// Returns: [['id' => 1, 'name' => 'Default', 'slug' => 'default', 'isNavigation' => true, 'isFiltering' => true, 'isDeletable' => false, 'isDefault' => true, 'position' => 0]]
 
 $contentTypes = $client->contentTypes->list();
 // Returns: [['id' => 'markdown', 'name' => 'Markdown'], ['id' => 'rich-text', 'name' => 'Rich Text']]
